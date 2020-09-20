@@ -61,5 +61,5 @@ run_analysis <- function(){
   mean_tidy_data <- tidy_Data %>%  group_by(subject, activity) %>% summarise_all(funs(mean))
   write.table(mean_tidy_data, "mean_tidy_data.txt", row.name=FALSE)
   
-  str(mean_tidy_data)
+  names(mean_tidy_data)
 }
